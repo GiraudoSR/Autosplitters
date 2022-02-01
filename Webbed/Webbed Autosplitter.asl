@@ -1,5 +1,5 @@
 /*
-		Webbed Autosplitter (31-JAN-2022)
+		Webbed Autosplitter (01-FEB-2022)
 
 		Made by Giraudo (@Giraudo#8245 on Discord)
 	
