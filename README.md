@@ -1,2 +1,2 @@
 # Autosplitters
-Autosplitters for LiveSplit
+Autosplitters made by me.
