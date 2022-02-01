@@ -17,9 +17,9 @@
 state("webbed")
 {
 	byte	roomID:			0x1279C90;
-	byte	stickerGet:		0x126DB2C, 0x3BC, 0xC, 0x50, 0x0, 0x80, 0x30C; // (0 = no | 10 = Sticker Get!)
-	byte	cutscene:		0x1277B48, 0x0, 0xE0C, 0xC, 0x4C;	// Is this a "cutscene"? (0 = no | 1 = yes | 2 = yes yes?)
-	byte	playerDance:	0x148AA2C, 0x8,	0x1B4, 0x507;		// Player's Dancing Animation (0 = no | 63 = yes)
+	byte	stickerGet:		0x126DB2C, 0x3BC, 0xC, 0x50, 0x0, 0x80, 0x30C; 	// (0 = no | 10 = Sticker Get!)
+	byte	cutscene:		0x1277B48, 0x0, 0xE0C, 0xC, 0x4C;		// Is this a "cutscene"? (0 = no | 1 = yes | 2 = yes yes?)
+	byte	playerDance:		0x148AA2C, 0x8,	0x1B4, 0x507;			// Player's Dancing Animation (0 = no | 63 = yes)
 	float	playerPosX:		0x148A944, 0x0, 0x0;				// Player's X Position (Increases from left to right)
 	float	playerPosY:		0x148A944, 0x0, 0x4;				// Player's Y Position (Increases vertically downwards)
 	
@@ -27,35 +27,35 @@ state("webbed")
 	// Pauses on Pause, Journal and Main Menu, resets every new save file, and is consistent when you quit to menu and Continue.
 	
 	// Volatile, require cutscene and room restrictions
-	byte	mechWood:		0x148AA34, 0x8,  0x9;				// Mech-Ant breaking the wood				(0 = no | 1 = yes)
+	byte	mechWood:		0x148AA34, 0x8,  0x9;				// Mech-Ant breaking the wood			(0 = no | 1 = yes)
 	byte	beedungPop:		0x148A944, 0x18, 0x18;				// Dung Ball breaks / Princess breaks out	(0 = no | 1 = yes)
 	
 	// Bug Dancers, require room restrictions
 	
 		// "Tap Dance" Proof (0 = no | 63 = yes)
-		byte	mothDance:		0x11DD72C,	0x190,	0x4,	0xC,	0x2C,	0x10,	0x1C8,	0x7;							// Moth				- Room 18
-		byte	flyDance:		0x1279C20,	0x108,	0x74,	0x0,	0x70,	0xA4,	0x14C,	0x2C,	0x10,	0x1C8,	0x7;	// Fly Lord			- Room 18
-		byte	redbackDance:	0x1279C20,	0x60,	0x14C,	0x148,	0x2C,	0x10,	0x7BC,	0x7;							// Redback Spider	- Room 133
-		byte	orbDance1:		0x1279C68,	0x4,	0xB4,	0x10,	0x44,	0xA4,	0x2C,	0x10,	0x7BC,	0x7;			// Orb Weaver		- Room 72/74
-		byte	orbDance2:		0x1279C68,	0xB4,	0x0,	0x1AC,	0x2C,	0x10,	0x7BC,	0x7;							// Orb Weaver		- Room 73/75
+		byte	mothDance:		0x11DD72C,	0x190,	0x4,	0xC,	0x2C,	0x10,	0x1C8,	0x7;				// Moth			- Room 18
+		byte	flyDance:		0x1279C20,	0x108,	0x74,	0x0,	0x70,	0xA4,	0x14C,	0x2C,	0x10,	0x1C8,	0x7;	// Fly Lord		- Room 18
+		byte	redbackDance:	0x1279C20,	0x60,	0x14C,	0x148,	0x2C,	0x10,	0x7BC,	0x7;					// Redback Spider	- Room 133
+		byte	orbDance1:		0x1279C68,	0x4,	0xB4,	0x10,	0x44,	0xA4,	0x2C,	0x10,	0x7BC,	0x7;		// Orb Weaver		- Room 72/74
+		byte	orbDance2:		0x1279C68,	0xB4,	0x0,	0x1AC,	0x2C,	0x10,	0x7BC,	0x7;				// Orb Weaver		- Room 73/75
 	
 		// Not "Tap Dance" Proof (255 = no | 0 = yes)
 		
-		byte	wolfDance:		0x11DD72C,	0x1B0,	0x4,	0xC,	0x125;			// Wolf Spider - Room 18
+		byte	wolfDance:		0x11DD72C,	0x1B0,	0x4,	0xC,	0x125;		// Wolf Spider - Room 18
 		byte	ogreDance:		0x11DD72C,	0x0,	0xC,	0x14C,	0x14C,	0x125;	// Ogre Spider - Room 110
 
 		// > Ants
-		byte	antDance1:		0x11DD72C,	0x198,	0x4,	0xC,	0x121;			// Ant - Room 18
+		byte	antDance1:		0x11DD72C,	0x198,	0x4,	0xC,	0x121;		// Ant - Room 18
 
 		// > Bees
 		byte	beeDance1:		0x1279C68,	0xF4,	0x264,	0x48,	0x20,	0x121;	// Bee - Room 57 (refuses to change while talking)
 		byte	beeDance2:		0x1279CF4,	0xEC,	0x108,	0x108,	0x20,	0x121;	// Bee - Room 59
 
 		// > Beetles
-		byte	beetleDance1:	0x11DD72C,	0xD8,	0xC,	0x121;					// Beetle 1				- Room 105
-		byte	beetleDance2:	0x11DD72C,	0x590,	0xC,	0x121;					// Beetle 2 (can't fly)	- Room 106
-		byte	beetleDance3:	0x11DD72C,	0xA0,	0xC,	0x121;					// Beetle 3				- Room 116
-		byte	beetleDance4:	0x1279C68,	0xB4,	0x0,	0x618,	0x148,	0x121;	// Beetle 4				- Room 105
+		byte	beetleDance1:	0x11DD72C,	0xD8,	0xC,	0x121;				// Beetle 1		- Room 105
+		byte	beetleDance2:	0x11DD72C,	0x590,	0xC,	0x121;				// Beetle 2 (can't fly)	- Room 106
+		byte	beetleDance3:	0x11DD72C,	0xA0,	0xC,	0x121;				// Beetle 3		- Room 116
+		byte	beetleDance4:	0x1279C68,	0xB4,	0x0,	0x618,	0x148,	0x121;		// Beetle 4		- Room 105
 		byte	beetleDance5:	0x1279C68,	0xB4,	0x0,	0x34C,	0x121;			// Beetle 5 (Horned)	- Room 105/106/116
 }
 
@@ -85,11 +85,10 @@ startup
 				settings.Add("subsplit_Power",			false, "Split when leaving Power room.");
 				settings.Add("subsplit_Fuel",			false, "Split when leaving Fuel area.");
 				settings.Add("subsplit_Water",			false, "Split when leaving Water area.");
-				settings.Add("subsplit_LeavingPipes",	false, "Split when leaving Water Pipes.");
 				settings.Add("subsplit_Pipeworks",		false, "Split when going from Pipeworks area to Mech hub.");
 				settings.Add("subsplit_TopLeg",			false, "Split when entering Bottom-left Leg room.");
 				settings.Add("subsplit_BottomLeg",		false, "Split when leaving Bottom-left Leg room.");
-				settings.Add("subsplit_LegTransport",	false, "Split when going from Leg hub to Mech hub.");
+				settings.Add("subsplit_LegTransport",		false, "Split when going from Leg hub to Mech hub.");
 				settings.Add("subsplit_LegAttach", 		false, "Split when going from Mech room to Mandible area.");
 				settings.CurrentDefaultParent = "sub_splits";
 		
@@ -129,15 +128,15 @@ startup
 		settings.Add("dance_splits", false, "Dance%");
 		settings.SetToolTip("dance_splits", "Dance with every species of bug");
 		settings.CurrentDefaultParent = "dance_splits";
-			settings.Add("dance_moth",		false, "Split when Moth dances.");
-			settings.Add("dance_fly",		false, "Split when Fly Lord dances.");
-			settings.Add("dance_wolf",		false, "Split when Wolf Spider dances.");
-			settings.Add("dance_orb",		false, "Split when Golden Orb Weaver dances.");
-			settings.Add("dance_ogre",		false, "Split when Ogre Face Spider dances.");
+			settings.Add("dance_moth",	false, "Split when Moth dances.");
+			settings.Add("dance_fly",	false, "Split when Fly Lord dances.");
+			settings.Add("dance_wolf",	false, "Split when Wolf Spider dances.");
+			settings.Add("dance_orb",	false, "Split when Golden Orb Weaver dances.");
+			settings.Add("dance_ogre",	false, "Split when Ogre Face Spider dances.");
 			settings.Add("dance_redback",	false, "Split when Redback Spider dances.");
-			settings.Add("dance_ants",		false, "Split when any ant dances.");
+			settings.Add("dance_ants",	false, "Split when any ant dances.");
 			settings.Add("dance_beetles",	false, "Split when any beetle dances.");
-			settings.Add("dance_bees",		false, "Split when any bee dances.");
+			settings.Add("dance_bees",	false, "Split when any bee dances.");
 }
 
 start
