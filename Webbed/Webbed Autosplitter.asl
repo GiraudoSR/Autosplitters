@@ -137,7 +137,6 @@ startup
 			settings.Add("dance_ants",	false, "Split when any ant dances.");
 			settings.Add("dance_beetles",	false, "Split when any beetle dances.");
 			settings.Add("dance_bees",	false, "Split when any bee dances.");
-			settings.Add("dance_test",	false, "Test to see how fast this updates");
 }
 
 start
