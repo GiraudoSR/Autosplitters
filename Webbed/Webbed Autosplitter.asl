@@ -27,8 +27,8 @@ state("webbed")
 	// Pauses on Pause, Journal and Main Menu, resets every new save file, and is consistent when you quit to menu and Continue.
 	
 	// Volatile, require cutscene and room restrictions
-	byte	mechWood:		0x148AA34, 0x8,  0x9;				// Mech-Ant breaking the wood			(0 = no | 1 = yes)
-	byte	beedungPop:		0x148A944, 0x18, 0x18;				// Dung Ball breaks / Princess breaks out	(0 = no | 1 = yes)
+	byte	mechWood:		0x148AA34,	0x8,	0x9;				// Mech-Ant breaking the wood			(0 = no | 1 = yes)
+	byte	beedungPop:		0x148A944,	0x18,	0x18;				// Dung Ball breaks / Princess breaks out	(0 = no | 1 = yes)
 	
 	// Bug Dancers, require room restrictions
 	
@@ -110,12 +110,12 @@ startup
 	settings.CurrentDefaultParent = null;
 	settings.Add("100_splits", false, "100%");
 	settings.CurrentDefaultParent = "100_splits";
-		settings.Add("100_sticker", false, "Split when you get a new Sticker");
-		settings.SetToolTip("100_sticker", "Ends when you get all 12 Stickers");
+		settings.Add("100_sticker", false, "Split when you get a new Sticker.");
+		settings.SetToolTip("100_sticker", "Ends when you get all 12 Stickers.");
 	
 	settings.CurrentDefaultParent = null;
 	settings.Add("IL_splits", false, "Individual Levels (Turns off \"Start on New Game\")");
-	settings.SetToolTip("IL_splits", "Start and End Splits for ILs");
+	settings.SetToolTip("IL_splits", "Start and End Splits for ILs.");
 	settings.CurrentDefaultParent = "IL_splits";
 		settings.Add("IL_ants",		false, "Start on Hub to Ants, splits when Mech-Ant breaks the wood.");
 		settings.Add("IL_beetles",	false, "Start on Hub to Beetles, splits on Dung Hill to Hub.");
@@ -126,7 +126,7 @@ startup
 	settings.Add("extra_splits", false, "> > > Unfinished, may not work properly < < <");
 	settings.CurrentDefaultParent = "extra_splits";
 		settings.Add("dance_splits", false, "Dance%");
-		settings.SetToolTip("dance_splits", "Dance with every species of bug");
+		settings.SetToolTip("dance_splits", "Dance with every species of bug.");
 		settings.CurrentDefaultParent = "dance_splits";
 			settings.Add("dance_moth",	false, "Split when Moth dances.");
 			settings.Add("dance_fly",	false, "Split when Fly Lord dances.");
