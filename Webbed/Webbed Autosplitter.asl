@@ -137,6 +137,7 @@ startup
 			settings.Add("dance_ants",	false, "Split when any ant dances.");
 			settings.Add("dance_beetles",	false, "Split when any beetle dances.");
 			settings.Add("dance_bees",	false, "Split when any bee dances.");
+			settings.Add("dance_test",	false, "Test to see how fast this updates");
 }
 
 start
@@ -281,7 +282,7 @@ split
 	}
 	
 	// Hub to Bees
-	if ((settings["split_beesStart"] || !settings["IL_bees"]) && !vars.doneSplits.Contains("isBeesStart") && old.roomID == 18 && current.roomID == 55) {
+	if ((settings["split_beesStart"]) && !vars.doneSplits.Contains("isBeesStart") && old.roomID == 18 && current.roomID == 55) {
 		vars.doneSplits.Add("isBeesStart");
 		print("Bees Time!");
 		return true;
