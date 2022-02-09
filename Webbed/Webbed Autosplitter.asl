@@ -17,8 +17,8 @@
 state("webbed")
 {
 	byte	roomID:			0x1279C90;
-	byte	stickerGet:		0x126DB2C, 0x3BC, 0xC, 0x50, 0x0, 0x80, 0x30C; // (0 = no | 10 = Sticker Get!)
-	byte	cutscene:		0x1277B48, 0x0, 0xE0C, 0xC, 0x4C;	// Is this a "cutscene"? (0 = no | 1 = yes | 2 = yes yes?)
+	byte	stickerGet:		0x126DB2C, 0x3BC, 0xC, 0x50, 0x0, 0x80, 0x30C;	// (0 = no | 10 = Sticker Get!)
+	byte	cutscene:		0x1277B48, 0x0, 0xE0C, 0xC, 0x4C;		// Is this a "cutscene"? (0 = no | 1 = yes | 2 = yes yes?)
 	float	playerPosX:		0x148A944, 0x0, 0x0;				// Player's X Position (Increases from left to right)
 	float	playerPosY:		0x148A944, 0x0, 0x4;				// Player's Y Position (Increases vertically downwards)
 	
@@ -26,7 +26,7 @@ state("webbed")
 	// Pauses on Pause, Journal and Main Menu, resets every new save file, and is consistent when you quit to menu and Continue.
 	
 	// Volatile, require cutscene and room restrictions
-	byte	mechWood:		0x148AA34, 0x8,  0x9;				// Mech-Ant breaking the wood				(0 = no | 1 = yes)
+	byte	mechWood:		0x148AA34, 0x8,  0x9;				// Mech-Ant breaking the wood			(0 = no | 1 = yes)
 	byte	beedungPop:		0x148A944, 0x18, 0x18;				// Dung Ball breaks / Princess breaks out	(0 = no | 1 = yes)
 }
 
@@ -57,11 +57,11 @@ startup
 				settings.Add("subsplit_Power",			false, "Split when leaving Power room.");
 				settings.Add("subsplit_Fuel",			false, "Split when leaving Fuel area.");
 				settings.Add("subsplit_Water",			false, "Split when leaving Water area.");
-				settings.Add("subsplit_LeavingPipes",	false, "Split when leaving Water Pipes.");
+				settings.Add("subsplit_LeavingPipes",		false, "Split when leaving Water Pipes.");
 				settings.Add("subsplit_Pipeworks",		false, "Split when going from Pipeworks area to Mech hub.");
 				settings.Add("subsplit_TopLeg",			false, "Split when entering Bottom-left Leg room.");
 				settings.Add("subsplit_BottomLeg",		false, "Split when leaving Bottom-left Leg room.");
-				settings.Add("subsplit_LegTransport",	false, "Split when going from Leg hub to Mech hub.");
+				settings.Add("subsplit_LegTransport",		false, "Split when going from Leg hub to Mech hub.");
 				settings.Add("subsplit_LegAttach", 		false, "Split when going from Mech room to Mandible area.");
 			
 			settings.CurrentDefaultParent = "sub_splits";
@@ -114,7 +114,7 @@ init
 
 	vars.roomSplit = new Dictionary<Tuple<int,int>, string>
 	{
-        // Bye BF
+        	// Bye BF
 		{Tuple.Create(20,18), "split_farewellBF"},
 		
 		// Ants - Subsplits
@@ -141,7 +141,7 @@ init
 
 		// Individual Levels
 		{Tuple.Create(116,18), "IL_beetles"}
-    };
+	};
 }
 
 start
@@ -158,10 +158,10 @@ start
 	vars.isBottomLegDone = false;
 
 	return	(!settings["IL_splits"]	&& old.roomID == 13 && current.roomID == 19 && current.gameTime < 2.0) ||
-			(settings["IL_ants"]	&& old.roomID == 18 && current.roomID == 76) ||
-			(settings["IL_beetles"]	&& old.roomID == 18 && current.roomID == 96) ||
-			(settings["IL_bees"]	&& old.roomID == 18 && current.roomID == 55) ||
-			(settings["IL_bower"]	&& old.roomID == 18 && current.roomID == 120);
+		(settings["IL_ants"]	&& old.roomID == 18 && current.roomID == 76) ||
+		(settings["IL_beetles"]	&& old.roomID == 18 && current.roomID == 96) ||
+		(settings["IL_bees"]	&& old.roomID == 18 && current.roomID == 55) ||
+		(settings["IL_bower"]	&& old.roomID == 18 && current.roomID == 120);
 }
 
 split
