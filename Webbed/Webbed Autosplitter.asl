@@ -1,12 +1,11 @@
 /*
 		Webbed Autosplitter (08-FEB-2022)
 
-		Made by Giraudo (@Giraudo#8245 on Discord)
+		Made by Giraudo (@giraudo on Discord)
 	
-		Special thanks to ShadowthePast (@Past#9621) for the Ants Subsplits,
-	torqqes (@torqqes#5650) and SteelOsprei (@SteelOsprei#5720) for split ideas,
-	and CashMunkey (@CashMunkey#6541) for helping me with small, yet very helpful
-	stuff when I started this.
+		Special thanks to Past (@past) for the Ants Subsplits, stripes (@stripes)
+	and SteelOsprei (@steelosprei) for split ideas,	and CashMunkey (@cashmunkey) for
+	helping me with small, yet very helpful stuff when I started this.
 
 		A huge thanks to the Webbed speedrunning community, the devs and everyone
 	who helped me along the way, through feedback and/or just support in general.
